@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<meta charset="UTF-8">
+
+		<title>TextReader</title>
+		<style>
+			article {margin: 0 auto;max-width: 800px;text-align: center;}
+			textarea {max-width: 600px;height: 100px;width:100%;text-align: left;}
+			button{border-radius: 3px;border: 1px solid #dddddd;height: 30px;width: 100px;cursor: pointer;}
+		</style>
+	</head>
+
+	<body>
+		<article>
+			<p>
+				<textarea id="texts" rows="15" class="_play">语音朗读（Phonetic reading）</textarea>
+			</p>
+			<p>
+				<label>选择语音类型：</label>
+				<select id="voiceSelect" onchange="play()"></select>
+			</p>
+			<button id="get_note">读取笔记内容</button>
+			<button class="_search" onclick="play()">开始朗读</button>
+			<button onclick="pause()">暂停</button>
+			<button onclick="resume()">继续</button>
+			<!-- <button onclick="cancel()">清除队列</button> -->
+			<button onclick="cls()">清空文本</button>
+
+		</article>
+	</body>
+
+ 	<script src="script/Synthesis.js"></script>
+	<script src="script/Read.js" type="module"></script>
+</html>
